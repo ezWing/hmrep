@@ -104,8 +104,8 @@ function(context, args){
 
 		if (pFrom!=nr) {
 			log = log + "- change from:" + pFrom + ", to: "  + nr + "\n"
-			res = #s.sys.manage({reorder:{from:pFrom, to:nr}})
-			sleep (10)
+			//comment below to not perform changes phisicaly
+			//res = #s.sys.manage({reorder:{from:pFrom, to:nr}})
 			log = searchNchange(pFrom, nr, tab, log)
 			return log
 		}
@@ -130,7 +130,7 @@ function(context, args){
 	
 	log = log + "\n\nprzed zmiana nr=" + i + showTable (perfect)
 	for (var i=0; i<perfect.length; i++) {
-		log = log + "\n\nprzed zmiana nr=" + i + showTable (perfect)
+		//log = log + "\n\nprzed zmiana nr=" + i + showTable (perfect)
 		log = swapPlaces (i, perfect, log)
 	}
 	log = log + "po zmianie nr=" + i + showTable (perfect)
